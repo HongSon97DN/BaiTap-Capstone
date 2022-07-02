@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- STYLE CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="position: relative;" id="myBody">
-    <header id="portNavbar" class="fixed_top">
+    <header id="header" class="fixed_top header">
         <div class="container d-flex justify-content-between">
             <div>
                 <h2>
@@ -79,7 +79,9 @@
     <section class="carousel" id="carousel">
       <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselCaptions" data-slide-to="0" class="active">
+            <span></span>
+          </li>
           <li data-target="#carouselCaptions" data-slide-to="1"></li>
           <li data-target="#carouselCaptions" data-slide-to="2"></li>
           <li data-target="#carouselCaptions" data-slide-to="3"></li>
@@ -217,7 +219,7 @@
           </div>
       </div>
     </section>
-    <section class="chooseUs">
+    <section class="chooseUs" id="chooseUs">
       <div id="chooseUs" class="py-5">
         <div class="container py-md-5 py-3">
           <div class="chooseUs_text row">
@@ -315,5 +317,17 @@
     <!-- BACK TO TOP -->
     <script src="./js/util.js"></script>
     <script src="./js/main.js"></script>
+    <!--  -->
+    <script>
+        $(window).on('scroll', function(){
+          var scroll = $(window).scrollTop();
+
+          if(scroll >= 80) {
+            $('header').addClass('fixed_scroll');
+          } else {
+            $('header').removeClass('fixed_scroll');
+          }
+        })
+    </script>
 </body>
 </html>
