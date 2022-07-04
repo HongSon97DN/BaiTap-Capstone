@@ -282,16 +282,12 @@ header .navbar-brand {
     opacity: 0.6;
 }
 #carouselCaptions .carousel-indicators li {
-    box-sizing: content-box;
+    border-radius: 6px;
+    border: 0px;
+    margin: 0 10px;
     width: 10px;
     height: 10px;
-    margin: 0 8px;
-    cursor: pointer;
-    background-color: #fff;
-    background-clip: padding-box;
-    transition: opacity 0.6s ease;
-    border-radius: 50%;
-    color: #fff;
+    transition: all 0.5;
     opacity: 1;
 /* 
     background: var(--primary-color);
@@ -301,10 +297,11 @@ header .navbar-brand {
 #carouselCaptions .carousel-indicators li.active,
 #carouselCaptions .carousel-indicators li:hover{
     background-color: #189A46;
-    width: 35px;
+    width: 30px;
     height: 10px;
-    border-radius: 12px;
     display: block; 
+    opacity: 1;
+    transition: all 0.5;
 }
 .carousel .carousel-inner a:hover{
     background-color: #fff;
