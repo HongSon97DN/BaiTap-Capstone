@@ -133,7 +133,7 @@ a.read:hover{
     top: 40px;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 9999;
 }
 .navbar {
     display: flex;
@@ -182,7 +182,7 @@ header .navbar-brand {
 #navbarHeader .navbar-nav .nav-link:hover:before {
     width: 100%;
 }
-#navbarHeader .dropdown-item::after{
+#navbarHeader a.dropdown-item::after{
     content: '';
     width: 0;
     height: 1px;
@@ -190,10 +190,30 @@ header .navbar-brand {
     display: block;
     transition: all 0.5s;
 }
-#navbarHeader .dropdown-item:hover::after{
+#navbarHeader a.dropdown-item:hover::after{
     width: 100%;
     color: var(--primary-color);
 }
+.dropdown-toggle::after{
+    display: none;
+}
+#navbarHeader .nav-link i {
+    font-size: 12px;
+}
+#iconHeader .fa-bars{
+    display: block;
+}   
+#iconHeader .fa-xmark{
+    display: none;
+}
+.showUp .navbar-toggler{
+    border: 2px solid black;
+}
+#navbarHeader .navbar-toggler:hover{
+    border: 2px solid black;
+} 
+
+   
 /* ------------------------------------
 ----------------------------------------- */
 #switchButton i{
@@ -399,3 +419,130 @@ header .navbar-brand {
     font-weight: 400;
 }
 /* --------------------------------- */
+@media screen and (max-width: 1200px){
+    .container{
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+}
+
+@media screen and (max-width: 992px){
+
+    /* ---------HEADER--------- */
+    .container{
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .header {
+        height: auto;
+        padding: 15px 0;
+        transition: all 0.5s;
+    }
+    
+    #header nav .navbar-toggler{
+        position: absolute;
+        right: 20px;
+        top: 18px;
+    }
+    #header .modeTheme{
+        position: absolute;
+        right: 75px;
+        top: 15px;
+    }
+    #header .fixed_top {
+        position: fixed;
+        top: 40px;
+        right: 0;
+        left: 0;
+        z-index: 9999;
+        height: 400px;
+        background-color: #fff;
+    }
+    #navbarHeader .navbar-nav .nav-link {
+       text-align: center;
+       width: 100%;
+    }
+    #navbarHeader .navbar-nav .dropdown-menu {
+        text-align: center;
+        width: 70%;
+        margin: auto;
+     }
+    #navbarHeader .navbar-nav .nav-link:hover:before {
+        width: 0;
+    }
+    #navbarHeader a.dropdown-item:hover::after{
+        width: 0;
+    }
+    #navbarHeader a.dropdown-item:hover{
+        color: #189A46;
+        background-color: #fff;
+    }
+    #header .navbar-toggler {
+        color: #fff;
+        background-color: #189A46;
+    }
+    .showUp #iconHeader .fa-bars{
+        display: none;
+    }
+    .showUp #iconHeader .fa-xmark{
+        display: block;
+    }
+
+
+    /* --------------------------- */
+
+    /* ---------CAROUSEL---------- */
+    .carousel .padding_left{
+        padding-left: 0 !important;
+        padding-bottom: 15vh;
+    }
+    .carousel .padding_right{
+        padding-right: 0 !important;
+        padding-bottom: 15vh;
+    }
+    .carousel .carousel-caption h5{
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .carousel .carousel-caption p{
+        font-size: 15px;
+    }
+
+    /* -------CHOOSEUS----- */
+    #chooseUs .chooseUs_text{
+        margin: auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container h5{
+        width: 80%;
+    }
+    .carousel .padding_right{
+        padding-right: 0;
+    }
+    .carousel .carousel-caption h5{
+        font-size: 50px;
+        line-height: 55px;
+        width: 80%;
+    }
+    .carousel .carousel-caption p{
+        font-size: 17px;
+        padding-top: 3px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    #chooseUs .chooseUs_text{
+        margin: auto;
+        width: 95%;
+    }
+}
