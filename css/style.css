@@ -516,6 +516,10 @@ header .navbar-brand {
         margin: auto;
         width: 90%;
     }
+    #chooseUs .chooseUs_text img{
+        width: 100%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 768px){
